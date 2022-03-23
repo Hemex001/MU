@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+// ============================================================
+// == INTERNATIONAL GAMING CENTER NETWORK
+// == www.igcn.mu
+// == (C) 2019 IGC-Network (R)
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// == Modify if you know what you do only!
+// == File is a part of IGCN Group MuOnline Server files.
+// ============================================================
+//
+// ### MapServer::ServerInfo ### - each server added in this server must be referenced in MapServer::ServerMapping section
+//
+// ### MapServer::ServerList ###
+//	Code: Unique code of server used to identity specific server. Values must match among ServerList.xml and every GameServer.ini
+//	Group: Group of servers, allowing to define a bunch of servers belonging to specified group. Moving between servers of different groups is not allowed, start value is 0
+//	Initiation: 1 ~ allows to move to any map which is located outside specified server, 0 ~ limits moves among maps defined within ServerMapping for the server
+//	IP: Address of the Server, WAN (External) address type for usual configuration type, allowed values: IP (version 4) or DNS Names - (maximum 15 characters)
+//	Port: Port of the server, value must match configuration of the server in ServerList.xml and GameServer.ini of the server
+//	MinEntryGrandReset: Minimum grand reset required to join the server, -1 if not applies
+//	MaxEntryGrandReset: Maximum grand reset required to join the server, -1 if not applies
+//	MinEntryReset: Minimum reset required to join the server, -1 if not applies
+//	MaxEntryReset: Maximum reset required to join the server, -1 if not applies
+//	MinEntryLevel: Minimum level required to join the server, -1 if not applies
+//	MaxEntryLevel: Maximum level required to join the server, -1 if not applies
+//	Name: Name of the Server, used for in-file description purpose helping easier recognition of server
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~ Server Code for Battle Core server is unmodifiable and must be set to 120). Group should stay configured at 6
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ### MapServer::ServerMapping::Server ###
+//	Code: defines a Server of a specified code for which Mapping will be configured
+//	MoveAble: 1 ~ reserves a map for the server it is configured for, 0 ~ defines that the map does not exist on specific server
+//	MapNumber: Map number to configure mapping rules for
+//	DestServerCode: Tells to which Server code character should be moved to in case of a move request to configured map number, value -1 is used for server code the map exist on
+//					In other meaning server cannot move character to itself, DestServerCode -1 value goes in pair with MoveAble value 1
+//	Name: Name of the Server, used for in-file description purpose helping easier recognition of server
+//
+// STRICTLY NO COMMENTS INSIDE TAGS
+-->
+
+<MapServer>
+	<ServerList>
+	<!--Official Server-->
+		<Server Code="0" Group="0" Initiation="1" IP="MY-IP" Port="55900" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-1" />
+		<Server Code="1" Group="0" Initiation="1" IP="MY-IP" Port="55901" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-2" />
+		<Server Code="2" Group="0" Initiation="1" IP="MY-IP" Port="55902" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-3" />
+		<Server Code="3" Group="0" Initiation="1" IP="MY-IP" Port="55903" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-4" />
+		<Server Code="4" Group="0" Initiation="1" IP="MY-IP" Port="55904" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-5" />
+		<Server Code="5" Group="0" Initiation="1" IP="MY-IP" Port="55905" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="General-6" />
+		<Server Code="6" Group="0" Initiation="1" IP="MY-IP" Port="55906" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="PvP-Square" />
+		
+		<Server Code="7" Group="0" Initiation="1" IP="MY-IP" Port="55907" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="1150" Name="Max1150-1" />
+		<Server Code="8" Group="0" Initiation="1" IP="MY-IP" Port="55908" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="1150" Name="Max1150-2" />
+		<Server Code="9" Group="0" Initiation="1" IP="MY-IP" Port="55909" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="1150" Name="Max1150-3" />
+		<Server Code="10" Group="0" Initiation="1" IP="MY-IP" Port="55910" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="1150" Name="Max1150-4" />
+
+		<Server Code="11" Group="0" Initiation="1" IP="MY-IP" Port="55911" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Platinum-1" />
+		<Server Code="12" Group="0" Initiation="1" IP="MY-IP" Port="55912" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Platinum-2" />
+		<Server Code="13" Group="0" Initiation="1" IP="MY-IP" Port="55913" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Platinum-3" />
+		
+		<Server Code="14" Group="0" Initiation="0" IP="MY-IP" Port="55914" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Market-Platinum" />
+		<Server Code="15" Group="0" Initiation="0" IP="MY-IP" Port="55915" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Market-General" />
+		<Server Code="16" Group="0" Initiation="0" IP="MY-IP" Port="55916" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="1150" Name="Market-Max1150" />
+		<Server Code="17" Group="0" Initiation="0" IP="MY-IP" Port="55917" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Arca" />
+		<Server Code="18" Group="0" Initiation="0" IP="MY-IP" Port="55918" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Siege" />
+		<Server Code="19" Group="0" Initiation="0" IP="MY-IP" Port="55919" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="Instance" />
+
+	<!--BattleCore-->
+		<Server Code="480" Group="24" Initiation="0" IP="MY-IP" Port="55120" MinEntryGrandReset="-1" MaxEntryGrandReset="-1" MinEntryReset="-1" MaxEntryReset="-1" MinEntryLevel="-1" MaxEntryLevel="-1" Name="BattleCore" />
+	</ServerList>
+	
+	<ServerMapping>
+		<Server Code="0" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-1 to PvP-Square"/>
+		<Server Code="0" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-1 to Siege"/>
+		<Server Code="0" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-1 to Market-General"/>
+		<Server Code="0" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-1 to Arca"/>
+		<Server Code="0" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-1 to Arca"/>
+		<Server Code="0" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-1 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="1" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-2 to PvP-Square"/>
+		<Server Code="1" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-2 to Siege"/>
+		<Server Code="1" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-2 to Market-General"/>
+		<Server Code="1" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-2 to Arca"/>
+		<Server Code="1" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-2 to Arca"/>
+		<Server Code="1" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-2 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="2" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-3 to PvP-Square"/>
+		<Server Code="2" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-3 to Siege"/>
+		<Server Code="2" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-2 to Market-General"/>
+		<Server Code="2" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-3 to Arca"/>
+		<Server Code="2" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-3 to Arca"/>
+		<Server Code="2" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-3 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="3" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-4 to PvP-Square"/>
+		<Server Code="3" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-4 to Siege"/>
+		<Server Code="3" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-4 to Market-General"/>
+		<Server Code="3" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-4 to Arca"/>
+		<Server Code="3" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-4 to Arca"/>
+		<Server Code="3" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-4 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="4" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-5 to PvP-Square"/>
+		<Server Code="4" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-5 to Siege"/>
+		<Server Code="4" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-5 to Market-General"/>
+		<Server Code="4" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-5 to Arca"/>
+		<Server Code="4" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-5 to Arca"/>
+		<Server Code="4" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-5 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="5" MoveAble="0" MapNumber="40" DestServerCode="6" Name="General-6 to PvP-Square"/>
+		<Server Code="5" MoveAble="0" MapNumber="6" DestServerCode="6" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="30" DestServerCode="18" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="31" DestServerCode="18" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="34" DestServerCode="18" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="41" DestServerCode="18" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="42" DestServerCode="18" Name="General-6 to Siege"/>
+		<Server Code="5" MoveAble="0" MapNumber="79" DestServerCode="15" Name="General-6 to Market-General"/>
+		<Server Code="5" MoveAble="0" MapNumber="92" DestServerCode="17" Name="General-6 to Arca"/>
+		<Server Code="5" MoveAble="0" MapNumber="96" DestServerCode="17" Name="General-6 to Arca"/>
+		<Server Code="5" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="General-6 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="6" MoveAble="1" MapNumber="40" DestServerCode="-1" Name="Stay on PvP-Square"/>
+		<Server Code="6" MoveAble="1" MapNumber="6" DestServerCode="-1" Name="Stay on PvP-Square"/>
+		<Server Code="6" MoveAble="0" MapNumber="30" DestServerCode="18" Name="PvP-Square to Siege"/>
+		<Server Code="6" MoveAble="0" MapNumber="31" DestServerCode="18" Name="PvP-Square to Siege"/>
+		<Server Code="6" MoveAble="0" MapNumber="34" DestServerCode="18" Name="PvP-Square to Siege"/>
+		<Server Code="6" MoveAble="0" MapNumber="41" DestServerCode="18" Name="PvP-Square to Siege"/>
+		<Server Code="6" MoveAble="0" MapNumber="42" DestServerCode="18" Name="PvP-Square to Siege"/>
+		<Server Code="6" MoveAble="0" MapNumber="79" DestServerCode="15" Name="PvP-Square to Market-General"/>
+		<Server Code="6" MoveAble="0" MapNumber="92" DestServerCode="17" Name="PvP-Square to Arca"/>
+		<Server Code="6" MoveAble="0" MapNumber="96" DestServerCode="17" Name="PvP-Square to Arca"/>
+		<Server Code="6" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="PvP-Square to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="7" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Max1150-1 to PvP-Square"/>
+		<Server Code="7" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Max1150-1 to Siege"/>
+		<Server Code="7" MoveAble="0" MapNumber="79" DestServerCode="16" Name="Max1150-1 to Market-Max1150"/>
+		<Server Code="7" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Max1150-1 to Arca"/>
+		<Server Code="7" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Max1150-1 to Arca"/>
+		<Server Code="7" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Max1150-1 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="8" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Max1150-2 to PvP-Square"/>
+		<Server Code="8" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Max1150-2 to Siege"/>
+		<Server Code="8" MoveAble="0" MapNumber="79" DestServerCode="16" Name="Max1150-2 to Market-Max1150"/>
+		<Server Code="8" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Max1150-2 to Arca"/>
+		<Server Code="8" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Max1150-2 to Arca"/>
+		<Server Code="8" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Max1150-2 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="9" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Max1150-3 to PvP-Square"/>
+		<Server Code="9" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Max1150-3 to Siege"/>
+		<Server Code="9" MoveAble="0" MapNumber="79" DestServerCode="16" Name="Max1150-3 to Market-Max1150"/>
+		<Server Code="9" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Max1150-3 to Arca"/>
+		<Server Code="9" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Max1150-3 to Arca"/>
+		<Server Code="9" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Max1150-3 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="10" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Max1150-4 to PvP-Square"/>
+		<Server Code="10" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Max1150-4 to Siege"/>
+		<Server Code="10" MoveAble="0" MapNumber="79" DestServerCode="16" Name="Max1150-4 to Market-Max1150"/>
+		<Server Code="10" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Max1150-4 to Arca"/>
+		<Server Code="10" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Max1150-4 to Arca"/>
+		<Server Code="10" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Max1150-4 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="11" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Platinum-1 to PvP-Square"/>
+		<Server Code="11" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Platinum-1 to Siege"/>
+		<Server Code="11" MoveAble="0" MapNumber="79" DestServerCode="14" Name="Platinum-1 to Market-Platinum"/>
+		<Server Code="11" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Platinum-1 to Arca"/>
+		<Server Code="11" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Platinum-1 to Arca"/>
+		<Server Code="11" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Platinum-1 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="12" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Platinum-2 to PvP-Square"/>
+		<Server Code="12" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Platinum-2 to Siege"/>
+		<Server Code="12" MoveAble="0" MapNumber="79" DestServerCode="14" Name="Platinum-2 to Market-Platinum"/>
+		<Server Code="12" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Platinum-2 to Arca"/>
+		<Server Code="12" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Platinum-2 to Arca"/>
+		<Server Code="12" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Platinum-2 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="13" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Platinum-3 to PvP-Square"/>
+		<Server Code="13" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Platinum-3 to Siege"/>
+		<Server Code="13" MoveAble="0" MapNumber="79" DestServerCode="14" Name="Platinum-3 to Market-Platinum"/>
+		<Server Code="13" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Platinum-3 to Arca"/>
+		<Server Code="13" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Platinum-3 to Arca"/>
+		<Server Code="13" MoveAble="0" MapNumber="114"	DestServerCode="19" Name="Platinum-3 to Instance" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="14" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Market-Platinum to PvP-Square"/>
+		<Server Code="14" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Market-Platinum to Siege"/>
+		<Server Code="14" MoveAble="1" MapNumber="79" DestServerCode="-1" Name="Stay on Market-Platinum"/>
+		<Server Code="14" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Market-Platinum to Arca"/>
+		<Server Code="14" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Market-Platinum to Arca"/>
+		<Server Code="14" MoveAble="0" MapNumber="114" DestServerCode="19" Name="Market-Platinum to Instance"/>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="15" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Market-General to PvP-Square"/>
+		<Server Code="15" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Market-General to Siege"/>
+		<Server Code="15" MoveAble="1" MapNumber="79" DestServerCode="-1" Name="Stay on Market-General"/>
+		<Server Code="15" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Market-General to Arca"/>
+		<Server Code="15" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Market-General to Arca"/>
+		<Server Code="15" MoveAble="0" MapNumber="114" DestServerCode="19" Name="Market-General to Instance"/>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->	
+		<Server Code="16" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Market-Max1150 to PvP-Square"/>
+		<Server Code="16" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Market-Max1150 to Siege"/>
+		<Server Code="16" MoveAble="1" MapNumber="79" DestServerCode="-1" Name="Stay on Market-Max1150"/>
+		<Server Code="16" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Market-Max1150 to Arca"/>
+		<Server Code="16" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Market-Max1150 to Arca"/>
+		<Server Code="16" MoveAble="0" MapNumber="114" DestServerCode="19" Name="Market-Max1150 to Instance"/>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<Server Code="17" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Arca to PvP-Square"/>
+		<Server Code="17" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="30" DestServerCode="18" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="31" DestServerCode="18" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="34" DestServerCode="18" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="41" DestServerCode="18" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="42" DestServerCode="18" Name="Arca to Siege"/>
+		<Server Code="17" MoveAble="0" MapNumber="79" DestServerCode="15" Name="Arca to Market-General"/>
+		<Server Code="17" MoveAble="1" MapNumber="92" DestServerCode="-1" Name="Stay on Arca"/>
+		<Server Code="17" MoveAble="1" MapNumber="96" DestServerCode="-1" Name="Stay on Arca"/>
+		<Server Code="17" MoveAble="0" MapNumber="114" DestServerCode="19" Name="Arca to Instance"/>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<Server Code="18" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Siege to PvP-Square"/>
+		<Server Code="18" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Siege to PvP-Square"/>
+		<Server Code="18" MoveAble="1" MapNumber="30" DestServerCode="-1" Name="Stay on Siege"/>
+		<Server Code="18" MoveAble="1" MapNumber="34" DestServerCode="-1" Name="Stay on Siege"/>
+		<Server Code="18" MoveAble="1" MapNumber="31" DestServerCode="-1" Name="Stay on Siege"/>
+		<Server Code="18" MoveAble="1" MapNumber="41" DestServerCode="-1" Name="Stay on Siege"/>
+		<Server Code="18" MoveAble="1" MapNumber="42" DestServerCode="-1" Name="Stay on Siege"/>
+		<Server Code="18" MoveAble="0" MapNumber="79" DestServerCode="15" Name="Siege to Market-General"/>
+		<Server Code="18" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Siege to Arca"/>
+		<Server Code="18" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Siege to Arca"/>
+		<Server Code="18" MoveAble="0" MapNumber="114" DestServerCode="19" Name="Siege to Instance"/>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<Server Code="19" MoveAble="0" MapNumber="40" DestServerCode="6" Name="Instance to PvP-Square"/>
+		<Server Code="19" MoveAble="0" MapNumber="6" DestServerCode="6" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="30" DestServerCode="-1" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="34" DestServerCode="-1" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="31" DestServerCode="-1" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="41" DestServerCode="-1" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="42" DestServerCode="-1" Name="Instance to Siege"/>
+		<Server Code="19" MoveAble="0" MapNumber="79" DestServerCode="15" Name="Instance to Market-General"/>
+		<Server Code="19" MoveAble="0" MapNumber="92" DestServerCode="17" Name="Instance to Arca"/>
+		<Server Code="19" MoveAble="0" MapNumber="96" DestServerCode="17" Name="Instance to Arca"/>
+		<Server Code="19" MoveAble="1" MapNumber="114" DestServerCode="19" Name="Stay on Instance"/>
+	</ServerMapping>
+</MapServer>
